@@ -76,6 +76,17 @@
         opacity: 1;
         transform: none;
       }
+      .faq-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.25s ease-out;
+      }
+      .faq-item.open .faq-content {
+        grid-template-rows: 1fr;
+      }
+      .faq-item.open .faq-chevron {
+        transform: rotate(180deg);
+      }
     </style>
   </head>
   <body class="relative isolate min-h-screen overflow-x-hidden bg-transparent text-foreground">
@@ -94,6 +105,7 @@
           <a href="#como-funciona" class="transition-colors hover:text-white">O que é Bot?</a>
           <a href="#video-demo" class="transition-colors hover:text-white">Ver Funcionando</a>
           <a href="#precos" class="transition-colors hover:text-white">Preços</a>
+          <a href="#faq" class="transition-colors hover:text-white">FAQ</a>
         </nav>
         <a
           href="#contato"
@@ -355,7 +367,168 @@
       </div>
     </section>
 
-    <!-- Seção de Contato para Venda -->
+    <!-- FAQ — BOTS PATH OF EXILE (PoE) -->
+    <section id="faq" class="scroll-mt-20 border-t border-border bg-card/25 px-6 py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="reveal text-center">
+          <div class="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-primary">
+            <i data-lucide="help-circle" class="h-3.5 w-3.5"></i> Tire suas dúvidas
+          </div>
+          <h2 class="text-3xl font-extrabold tracking-tight md:text-5xl">
+            FAQ — BOTS <span class="text-primary">PATH OF EXILE (PoE)</span>
+          </h2>
+          <p class="mt-3 text-muted-foreground">
+            Perguntas frequentes sobre funcionamento, rendimentos e gerenciamento de bots.
+          </p>
+        </div>
+
+        <div id="faq-list" class="reveal mt-12 space-y-3">
+          <!-- 1 -->
+          <div class="faq-item open rounded-xl border border-border bg-card/70 px-6 transition-colors hover:border-primary/40">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-white">
+              <span>1. Preciso de um PC forte para rodar os bots?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content">
+              <div class="overflow-hidden">
+                <div class="space-y-3 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  <p><strong class="text-white">Não!</strong> Você não precisa de um computador extremamente potente.</p>
+                  <p>Os requisitos dependem da quantidade de bots que pretende utilizar. Podemos orientar você sobre a configuração ideal para começar, seja com apenas um bot ou com uma operação maior.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="faq-item rounded-xl border border-border bg-card/70 px-6 transition-colors hover:border-primary/40">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-white">
+              <span>2. Quanto dinheiro um bot consegue render?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content">
+              <div class="overflow-hidden">
+                <div class="space-y-4 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    Nos primeiros dias de uma liga de Path of Exile, um único bot pode gerar aproximadamente <strong class="text-white">R$ 150 a R$ 300 por dia</strong> em faturamento bruto, dependendo das condições do mercado, da estratégia utilizada e do valor das moedas.
+                  </p>
+                  <div class="rounded-lg border border-primary/40 bg-primary/10 p-4">
+                    <p class="mb-2 flex items-center gap-2 font-bold text-primary">
+                      <i data-lucide="alert-triangle" class="h-4 w-4"></i> Importante:
+                    </p>
+                    <ul class="list-disc space-y-1.5 pl-5 text-xs sm:text-sm text-zinc-300">
+                      <li>Os valores são estimativas de faturamento, não de lucro líquido.</li>
+                      <li>Esse rendimento é referente a um único bot, não à operação inteira.</li>
+                      <li>Conforme a liga avança, o rendimento diário tende a diminuir devido à desvalorização das moedas e às mudanças na economia do jogo.</li>
+                      <li>Despesas operacionais, taxas de venda e eventuais perdas precisam ser descontadas para calcular o lucro real.</li>
+                      <li>Não existe garantia de rendimento mínimo ou fixo.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="faq-item rounded-xl border border-border bg-card/70 px-6 transition-colors hover:border-primary/40">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-white">
+              <span>3. Existe risco de banimento?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content">
+              <div class="overflow-hidden">
+                <div class="space-y-3 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  <p><strong class="text-white">Sim!</strong> O uso de bots viola as regras do Path of Exile e pode resultar no banimento da conta.</p>
+                  <p>Por esse motivo, é importante conhecer os riscos e tomar cuidados durante a operação. Mesmo com precauções, não existe garantia de que uma conta não será banida.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="faq-item rounded-xl border border-border bg-card/70 px-6 transition-colors hover:border-primary/40">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-white">
+              <span>4. Onde posso vender as moedas que os bots farmam?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content">
+              <div class="overflow-hidden">
+                <div class="space-y-3 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  <p>Existem diversas plataformas e comunidades onde é possível comercializar moedas e itens do jogo.</p>
+                  <p>Nós fornecemos uma lista de locais para venda, ajudando você a encontrar compradores e conhecer as opções disponíveis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="faq-item rounded-xl border border-border bg-card/70 px-6 transition-colors hover:border-primary/40">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-white">
+              <span>5. Existem bots para outros jogos?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content">
+              <div class="overflow-hidden">
+                <div class="space-y-3 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  <p><strong class="text-white">Sim!</strong> Além do Path of Exile, existem oportunidades em diversos outros jogos.</p>
+                  <p>Em nosso Discord, abordamos vários jogos, compartilhamos informações, estratégias e oportunidades para quem deseja trabalhar com esse mercado.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="faq-item rounded-xl border border-border bg-card/70 px-6 transition-colors hover:border-primary/40">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-white">
+              <span>6. Preciso ter experiência com Path of Exile?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content">
+              <div class="overflow-hidden">
+                <div class="space-y-3 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  <p>Não é obrigatório, mas ter algum conhecimento sobre o jogo facilita bastante o aprendizado e o gerenciamento dos bots.</p>
+                  <p>Se você está começando do zero, contamos com uma mentoria especializada para orientar você e ajudar a entender o funcionamento da operação.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="faq-item rounded-xl border border-border bg-card/70 px-6 transition-colors hover:border-primary/40">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-white">
+              <span>7. Vocês podem cuidar dos meus bots para mim?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content">
+              <div class="overflow-hidden">
+                <div class="space-y-3 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  <p><strong class="text-white">Sim!</strong> Oferecemos um serviço de gerenciamento completo mediante o pagamento de uma taxa.</p>
+                  <p>Nossa equipe pode cuidar diariamente da sua operação, incluindo acompanhamento dos bots, manutenção e outras atividades necessárias para manter tudo funcionando.</p>
+                  <p>É uma alternativa para quem deseja trabalhar com bots, mas não tem tempo ou conhecimento para administrar a operação sozinho.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="faq-item rounded-xl border border-border bg-card/70 px-6 transition-colors hover:border-primary/40">
+            <button type="button" class="faq-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-white">
+              <span>8. Quanto tempo dura o bot?</span>
+              <i data-lucide="chevron-down" class="faq-chevron h-5 w-5 shrink-0 text-primary transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content">
+              <div class="overflow-hidden">
+                <div class="space-y-3 pb-5 text-sm leading-relaxed text-muted-foreground">
+                  <p>O acesso ao bot funciona por meio de uma <strong class="text-white">assinatura mensal</strong>.</p>
+                  <p>Isso significa que você contrata o serviço por um mês e pode renovar a assinatura para continuar utilizando.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Ainda tem dúvidas? / Contato para Venda -->
     <section id="contato" class="scroll-mt-20 border-t border-border bg-card/40 px-6 py-24">
       <div class="reveal mx-auto max-w-3xl rounded-2xl border-2 border-primary/50 bg-card/85 p-8 text-center shadow-[0_0_70px_-20px_hsl(var(--primary)/0.55)] backdrop-blur sm:p-12">
         <img
@@ -364,10 +537,13 @@
           class="mx-auto mb-6 h-20 w-20 object-contain drop-shadow-[0_0_25px_hsl(var(--primary)/0.6)]"
         />
         <h2 class="text-3xl font-extrabold tracking-tight md:text-4xl">
-          Pronto para adquirir seu <span class="text-primary">Bot de PoE</span>?
+          Ainda tem <span class="text-primary">dúvidas</span>?
         </h2>
-        <p class="mx-auto mt-4 max-w-xl text-muted-foreground">
-          Fale agora com o time da PhoenixStore para tirar suas dúvidas, confirmar a disponibilidade e ativar sua licença com suporte.
+        <p class="mt-3 text-lg font-semibold text-white">
+          Entre em contato com nossa equipe ou participe do nosso Discord!
+        </p>
+        <p class="mx-auto mt-3 max-w-xl text-muted-foreground">
+          Estamos disponíveis para explicar o funcionamento dos bots, apresentar nossa mentoria e ajudar você a escolher a melhor forma de começar.
         </p>
 
         <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -413,6 +589,19 @@
         { threshold: 0.15 }
       );
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Accordion do FAQ
+      const faqList = document.getElementById("faq-list");
+      if (faqList) {
+        faqList.addEventListener("click", (e) => {
+          const trigger = e.target.closest(".faq-trigger");
+          if (!trigger) return;
+          const item = trigger.closest(".faq-item");
+          const isOpen = item.classList.contains("open");
+          document.querySelectorAll(".faq-item.open").forEach((el) => el.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      }
 
       // Autoplay imediato + botão de som
       const botVideo = document.getElementById("poe-bot-video");
